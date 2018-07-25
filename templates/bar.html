@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <h1>你好,{{ username }}</h1>
+    <a href="/">返回首页</a>
+    <h1></h1>
+    <form action="/bar" method="post">
+        <h1>请输入标题和数据，名称与数量用英文逗号分离</h1>
+        <p>标题: <input type="text" name="tile" /></p><a>示例:人数统计表</a>
+        <p>名称: <input type="text" name="x" /></p><a>示例:校长，老师，男生，女生</a>
+        <p>数量: <input type="text" name="y" /></p><a>示例：1，10，40，60</a>
+        <h1></h1>
+        <input type="submit" value="生成柱状图" />
+    </form>
+
+
+</body>
+</html>
