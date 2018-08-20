@@ -2,19 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
-</head>
-<body>
-    <h1>{{ message }}</h1>
-    <h1>你好,{{ username }}</h1>
-    <a href="/bar">简单柱状图</a>
-    <h1></h1>
-    <a href="/">返回主页</a>
-    <h1></h1>
-    <a href="/register">注册</a>
-    <h1></h1>
-    <a href="/login" methond="get">登陆</a>
-    <img src=""/>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+</head>
+<style>
+</style>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>    <!-- 网站logo和文字 -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">主页 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">分享</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/bar">简单柱状图</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">期待</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">期待</a></li>
+          </ul>
+        </li>
+      </ul><!--导航功能-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a  href="/login" >请登录</a></li>
+        <li><a  href="/register" >注册</a></li>
+        <li>
+      </ul><!--注册登陆按钮-->
+    </div>
+  </div>
+</nav>    <!--导航栏-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="item">
+            <img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide [1920x500]" src="{{ url_for('static', filename='img/c.jpg') }}" data-holder-rendered="true">
+          </div>
+          <div class="item active">
+            <img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide [1920x500]" src="{{ url_for('static', filename='img/b.jpg') }}" data-holder-rendered="true">
+          </div>
+          <div class="item">
+            <img data-src="{{ url_for('static', filename='img/a.jpg') }}"  alt="Third slide [1920x500]" src="{{ url_for('static', filename='img/a.jpg') }}" data-holder-rendered="true">
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+</div>    <!--图片展示-->
+<div class="jumbotron">
+      <div class="container">
+        <h1>你好,{{ username }}！</h1>
+         <h1>{{ message }}</h1>
+      </div>
+    </div>    <!--欢迎文字-->
+<div class="container projects">
+    <div class="projects-header page-header">
+      <h2>功能</h2>
+      <p>希望能帮助到你</p>
+    </div>
+    <div class="row">
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="">
+            <a href="http://www.youzhan.org/" title="Bootstrap 优站精选" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">
+              <img class="lazy" src="{{ url_for('static', filename='img/a.jpg') }}" width="300" height="150" data-src="{{ url_for('static', filename='img/d.jpg') }}" alt="Bootstrap 优站精选">
+            </a>
+            <div class="caption">
+              <h3>
+                  <a href="http://www.youzhan.org/" title="Bootstrap 优站精选" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">优站精选<br><small> Bootstrap 网站实例</small></a>
+              </h3>
+              <p>Bootstrap 优站精选频道收集了众多基于 Bootstrap 构建、设计精美的、有创意的网站。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="">
+            <a href="/" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">
+              <img class="lazy" src="{{ url_for('static', filename='img/a.jpg') }}" width="300" height="150" data-src="{{ url_for('static', filename='img/a.jpg') }}" alt="图片">
+            </a>
+            <div class="caption">
+              <h3>
+                  <a href="" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">名称<br><small>敬请期待</small></a>
+              </h3>
+              <p></p>功能介绍</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="">
+            <a href="/" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">
+              <img class="lazy" src="{{ url_for('static', filename='img/a.jpg') }}" width="300" height="150" data-src="{{ url_for('static', filename='img/a.jpg') }}" alt="图片">
+            </a>
+            <div class="caption">
+              <h3>
+                  <a href="" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">名称<br><small>敬请期待</small></a>
+              </h3>
+              <p></p>功能介绍</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 ">
+          <div class="thumbnail" style="">
+            <a href="/" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">
+              <img class="lazy" src="{{ url_for('static', filename='img/a.jpg') }}" width="300" height="150" data-src="{{ url_for('static', filename='img/a.jpg') }}" alt="图片">
+            </a>
+            <div class="caption">
+              <h3>
+                  <a href="" title="" target="_blank" onclick="_hmt.push(['_trackEvent', 'tile', 'click', 'youzhan-tile'])">名称<br><small>敬请期待</small></a>
+              </h3>
+              <p></p>功能介绍</p>
+            </div>
+          </div>
+        </div>
+  </div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

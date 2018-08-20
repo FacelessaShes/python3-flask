@@ -2,22 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>{{ message }}</h1>
-    <h1>你好,{{ username }}</h1>
-    <a href="/">返回首页</a>
-    <h1></h1>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>    <!-- 网站logo和文字 -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">主页 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">分享</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/bar">简单柱状图</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">期待</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">期待</a></li>
+          </ul>
+        </li>
+      </ul><!--导航功能-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a  href="/login" >{{ message }}</a></li>
+        <li><a  href="/register" >注册</a></li>
+        <li>
+      </ul><!--注册登陆按钮-->
+    </div>
+  </div>
+</nav><!--导航栏-->
+<div class="jumbotron">
     <form action="/bar" method="post">
         <h1>请输入标题和数据，名称与数量用英文逗号分离</h1>
-        <p>标题: <input type="text" name="tile" /></p><a>示例:人数统计表</a>
-        <p>名称: <input type="text" name="x" /></p><a>示例:校长，老师，男生，女生</a>
-        <p>数量: <input type="text" name="y" /></p><a>示例：1，10，40，60</a>
+        <p>标题: <input type="text" name="tile" /></p><p>示例:人数统计表</p>
+        <p>名称: <input type="text" name="x" /></p>示例:校长，老师，男生，女生</p>
+        <p>数量: <input type="text" name="y" /></p><p>示例：1，10，40，60</p>
         <h1></h1>
         <input type="submit" value="生成柱状图" />
     </form>
-
-
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
